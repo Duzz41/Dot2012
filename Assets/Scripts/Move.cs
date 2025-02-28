@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
 {
-    public float speed = 5f;  // Hız
+    public float speed = 10f;  // Hız
     private Rigidbody rb;
     private Vector2 moveInput;
     public InputActionAsset inputActions;
