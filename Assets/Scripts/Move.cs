@@ -7,17 +7,24 @@ public class Move : MonoBehaviour
     private Rigidbody rb;
     private Vector2 moveInput;
     public InputActionAsset inputActions;
+    private Camera camera;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-    }    private void FixedUpdate()
+    }
+    void Start()
+    {
+        camera = Camera.main;
+    }
+    private void FixedUpdate()
     {
         // Hareket yönünü belirle
         Vector3 moveDirection = new Vector3(moveInput.x, 0, moveInput.y);
 
         // Topu hareket ettir ve döndür
         rb.AddTorque(new Vector3(moveInput.y, 0, -moveInput.x) * speed);
+        camera.transform.position = new Vector3(transform.position.x, camera.transform.position.y, transform.position.z);
     }
 
     // Input System'den gelen veriyi al
