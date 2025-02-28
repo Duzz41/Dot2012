@@ -24,7 +24,11 @@ public class Move : MonoBehaviour
 
         // Topu hareket ettir ve döndür
         rb.AddTorque(new Vector3(moveInput.y, 0, -moveInput.x) * speed);
+<<<<<<< HEAD
         camera.transform.position = new Vector3(transform.position.x, camera.transform.position.y, transform.position.z);
+=======
+        Debug.Log("speed");
+>>>>>>> Batuhan
     }
 
     // Input System'den gelen veriyi al
