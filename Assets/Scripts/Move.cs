@@ -18,6 +18,7 @@ public class Move : MonoBehaviour
 
         // Topu hareket ettir ve döndür
         rb.AddTorque(new Vector3(moveInput.y, 0, -moveInput.x) * speed);
+        Debug.Log("speed");
     }
 
     // Input System'den gelen veriyi al
